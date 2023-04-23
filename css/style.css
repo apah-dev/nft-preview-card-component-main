@@ -1,133 +1,163 @@
-@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap");
+      @import url("https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap");
 
-:root {
-  --Softblue: hsl(215, 51%, 70%);
-  --Cyan: hsl(178, 100%, 50%);
-  --Verydarkblue: hsl(217, 54%, 11%);
-  --darkblue: hsl(216, 50%, 16%);
-  --slightlyblue: hsl(215, 32%, 27%);
-  --White: hsl(0, 0%, 100%);
-}
+      :root {
+        --Softblue: hsl(215, 51%, 70%);
+        --Cyan: hsl(178, 100%, 50%);
+        --Verydarkblue: hsl(217, 54%, 11%);
+        --darkblue: hsl(216, 50%, 16%);
+        --slightlyblue: hsl(215, 32%, 27%);
+        --White: hsl(0, 0%, 100%);
+      }
 
-* {
-  box-sizing: border-box;
-}
-body {
-  font-family: "Outfit", sans-serif;
-  background-color: var(--Verydarkblue);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-main {
-  background-color: var(--darkblue);
-  width: 300px;
-  padding: 20px;
-  border-radius: 10px;
-  margin: 100px auto;
-}
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        font-family: "Outfit", sans-serif;
+        background-color: var(--Verydarkblue);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
+      main {
+        background-color: var(--darkblue);
+        width: 300px;
+        padding: 20px;
+        border-radius: 10px;
+        margin: 100px auto;
+      }
 
-.nftimage {
-  width: 100%;
-  border-radius: 10px;
-  cursor: pointer;
-  background: none;
-}
+      .nftimagecontainer {
+        position: relative;
+      }
 
-.nftprofile h1 {
-  color: var(--White);
-  font-size: 18px;
-  cursor: pointer;
-}
+      .nftimage {
+        width: 100%;
+        border-radius: 10px;
+        cursor: pointer;
+        background: none;
+      }
 
-.nftprofile a {
-  text-decoration: none;
-  color: var(--white);
-}
+      .overlay {
+        position: absolute;
+        background-color: hsla(178, 100%, 50%, 0.5);
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+      }
 
-.nftprofile a:hover {
-  color: var(--Cyan);
-}
+      .icon-view {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+      }
 
-.nftprofile p {
-  color: var(--Softblue);
-  font-size: 16px;
-}
+      .overlay {
+        display: none;
+      }
 
-.price {
-  display: flex;
-  flex-direction: row;
-  /* justify-content: space-between; */
-  align-items: center;
-}
+      .nftimagecontainer:hover .overlay {
+        display: block;
+      }
 
-/*To align the items in the price div */
-.price > span:nth-of-type(1) {
-  margin-left: 5px;
-  color: var(--Cyan);
-  align-self: flex-start;
-}
+      
 
-.price > img:nth-of-type(2) {
-  margin-left: 70px;
-}
+      .nftprofile h1 {
+        color: var(--White);
+        font-size: 18px;
+        cursor: pointer;
+      }
 
-.price > span:nth-of-type(2) {
-  margin-left: 5px;
-  color: var(--Softblue);
-  align-self: flex-end;
-}
+      .nftprofile a {
+        text-decoration: none;
+        color: var(--white);
+      }
 
-.creator {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-}
+      .nftprofile a:hover {
+        color: var(--Cyan);
+      }
 
-.creator img {
-  width: 25px;
-  background-color: white;
-  border-radius: 20px;
-}
+      .nftprofile p {
+        color: var(--Softblue);
+        font-size: 16px;
+      }
 
-.creator span {
-  color: var(--Softblue);
-}
+      .price {
+        display: flex;
+        flex-direction: row;
+        /* justify-content: space-between; */
+        align-items: center;
+      }
 
-.creator p {
-  font-size: 14px;
-  margin-left: 10px;
-  color: var(--White);
-}
+      /*To align the items in the price div */
+      .price > span:nth-of-type(1) {
+        margin-left: 5px;
+        color: var(--Cyan);
+        align-self: flex-start;
+      }
 
-.creator a {
-  text-decoration: none;
-  color: var(--White);
-}
-.creator a:hover {
-  color: var(--Cyan);
-  cursor: pointer;
-  transition: 0.2s;
-}
-hr {
-  border: solid 0.1px var(--slightlyblue);
-}
+      .price > img:nth-of-type(2) {
+        margin-left: 70px;
+      }
 
-footer {
-  margin-top: 10px;
-}
+      .price > span:nth-of-type(2) {
+        margin-left: 5px;
+        color: var(--Softblue);
+        align-self: flex-end;
+      }
 
-.attribution {
-  font-size: 11px;
-  text-align: center;
-  color: var(--Softblue);
-}
-.attribution a {
-  color: hsl(228, 45%, 44%);
-}
+      .creator {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+      }
 
-.twitter-icon {
-  width: 10%;
-  color: white;
-}
+      .creator img {
+        width: 25px;
+        background-color: white;
+        border-radius: 20px;
+      }
+
+      .creator span {
+        color: var(--Softblue);
+      }
+
+      .creator p {
+        font-size: 14px;
+        margin-left: 10px;
+        color: var(--White);
+      }
+
+      .creator a {
+        text-decoration: none;
+        color: var(--White);
+      }
+      .creator a:hover {
+        color: var(--Cyan);
+        cursor: pointer;
+        transition: 0.2s;
+      }
+      hr {
+        border: solid 0.1px var(--slightlyblue);
+      }
+
+      footer {
+        margin-top: 10px;
+      }
+
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+        color: var(--Softblue);
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+
+      .twitter-icon {
+        width: 10%;
+        color: white;
+      }
