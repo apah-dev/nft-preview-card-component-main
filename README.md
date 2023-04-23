@@ -29,21 +29,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://github.com/apah-dev/single-price-grid-component-master.git)
-- Live Site URL: [Add live site URL here](https://apah-dev.github.io/single-price-grid-component-master/)
-
-# Frontend Mentor - Single price grid component solution
-
-This is a solution to the [Single price grid component challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/single-price-grid-component-5ce41129d0ff452fec5abbbc). Frontend Mentor challenges help you improve your coding skills by building realistic projects.
-
-## Overview
-
-### The challenge
-
-Users should be able to:
-
-- View the optimal layout for the component depending on their device's screen size
-- See a hover state on desktop for the Sign Up call-to-action
+- Solution URL: [Add solution URL here](https://github.com/apah-dev/nft-preview-card-component-main.git)
+- Live Site URL: [Add live site URL here](https://apah-dev.github.io/nft-preview-card-component-main/)
 
 ## My process
 
@@ -51,43 +38,33 @@ Users should be able to:
 
 - Semantic HTML5 markup
 - CSS custom properties
-- Grid
 - Flexbox
-- Media Query
 
 ### What I learned
 
-Learnt how to use grid to create layouts
-Learnt how to span grid columns and rows to fit the layout of the design
-Learnt how to use more than one media query to target different sizes of the screen
-
-To make a blur underneath the box-shadow you have to give a spread value equal but negative to the blur value
+Learnt how to use use the nth-of-type to target a specific child in a list of items in a parent element
+Using hover for the active states
 
 ````css
-        @media (max-width: 768px) {
-        .container {
-          display: grid;
-          grid-template-columns: 1fr;
-          width: 80%;
-        }
-        .first {
-          grid-column: 1/1;
-        }
+
+      .price > img:nth-of-type(2) {
+        margin-left: 70px;
       }
 
-      @media (max-width: 1300px) {
-        .container {
-          display: grid;
-          grid-template-columns: 1fr;
-          width: 50%;
-        }
-        .first {
-          grid-column: 1/2;
-        }
+      .price > span:nth-of-type(2) {
+        margin-left: 5px;
+        color: var(--White);
+        align-self: flex-end;
       }
 
+      .price > p:nth-of-type(1) {
+        color: var(--Cyan);
+      }
 
-     box-shadow: 0 20px 20px -20px #333;
+      .price > p:nth-of-type(2) {
+        color: var(--Softblue);
+      }
+
 ```
 
 
