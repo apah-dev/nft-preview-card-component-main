@@ -58,21 +58,6 @@
         background: none;
       }
 
-      .nftimage:hover {
-        color: var(--Cyan);
-        background: var(--Cyan);
-      }
-
-      .nftimage img:hover {
-        color: var(--Cyan);
-        background: var(--Cyan);
-      }
-
-      .nftimage img a:hover {
-        color: var(--Cyan);
-        background: var(--Cyan);
-      }
-
       .nftprofile h1 {
         color: var(--White);
         font-size: 18px;
@@ -113,16 +98,8 @@
 
       .price > span:nth-of-type(2) {
         margin-left: 5px;
-        color: var(--White);
-        align-self: flex-end;
-      }
-
-      .price > p:nth-of-type(1) {
-        color: var(--Cyan);
-      }
-
-      .price > p:nth-of-type(2) {
         color: var(--Softblue);
+        align-self: flex-end;
       }
 
       .creator {
@@ -182,9 +159,11 @@
   <body>
     <main>
       <div class="nftimagecontainer">
-        <a href="#">
-          <img class="nftimage" src="images/image-equilibrium.jpg" />
-        </a>
+        <img
+          class="nftimage"
+          src="images/image-equilibrium.jpg"
+          alt="Equilibrium"
+        />
       </div>
 
       <div class="description">
@@ -193,12 +172,14 @@
           <p>Our Equilibrium collection promotes balance and calm.</p>
         </div>
         <div class="price">
-          <img src="images/icon-ethereum.svg" /> <span>0.041 ETH</span>
-          <img src="images/icon-clock.svg" /> <span>3 days left</span>
+          <img src="images/icon-ethereum.svg" alt="ethicon" />
+          <span>0.041 ETH</span>
+          <img src="images/icon-clock.svg" alt="clockicon" />
+          <span>3 days left</span>
         </div>
         <hr />
         <div class="creator">
-          <img src="images/image-avatar.png" />
+          <img src="images/image-avatar.png" alt="creator image" />
           <p><span>Creation of</span><a href="#"> Jules Wyvern</a></p>
         </div>
       </div>
