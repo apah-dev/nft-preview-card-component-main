@@ -4,7 +4,6 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- displays site properly based on user's device -->
-
     <link
       rel="icon"
       type="image/png"
@@ -56,6 +55,22 @@
         width: 100%;
         border-radius: 10px;
         cursor: pointer;
+        background: none;
+      }
+
+      .nftimage:hover {
+        color: var(--Cyan);
+        background: var(--Cyan);
+      }
+
+      .nftimage img:hover {
+        color: var(--Cyan);
+        background: var(--Cyan);
+      }
+
+      .nftimage img a:hover {
+        color: var(--Cyan);
+        background: var(--Cyan);
       }
 
       .nftprofile h1 {
@@ -64,7 +79,12 @@
         cursor: pointer;
       }
 
-      .nftprofile h1:hover {
+      .nftprofile a {
+        text-decoration: none;
+        color: var(--white);
+      }
+
+      .nftprofile a:hover {
         color: var(--Cyan);
       }
 
@@ -76,8 +96,25 @@
       .price {
         display: flex;
         flex-direction: row;
-        justify-content: space-between;
+        /* justify-content: space-between; */
         align-items: center;
+      }
+
+      /*To align the items in the price div */
+      .price > span:nth-of-type(1) {
+        margin-left: 5px;
+        color: var(--Cyan);
+        align-self: flex-start;
+      }
+
+      .price > img:nth-of-type(2) {
+        margin-left: 70px;
+      }
+
+      .price > span:nth-of-type(2) {
+        margin-left: 5px;
+        color: var(--White);
+        align-self: flex-end;
       }
 
       .price > p:nth-of-type(1) {
@@ -109,7 +146,12 @@
         margin-left: 10px;
         color: var(--White);
       }
-      .creator p:hover {
+
+      .creator a {
+        text-decoration: none;
+        color: var(--White);
+      }
+      .creator a:hover {
         color: var(--Cyan);
         cursor: pointer;
         transition: 0.2s;
@@ -130,27 +172,34 @@
       .attribution a {
         color: hsl(228, 45%, 44%);
       }
+
+      .twitter-icon {
+        width: 10%;
+        color: white;
+      }
     </style>
   </head>
   <body>
     <main>
       <div class="nftimagecontainer">
-        <img class="nftimage" src="images/image-equilibrium.jpg" />
+        <a href="#">
+          <img class="nftimage" src="images/image-equilibrium.jpg" />
+        </a>
       </div>
 
       <div class="description">
         <div class="nftprofile">
-          <h1>Equilibrium #3429</h1>
+          <h1><a href="#">Equilibrium #3429</a></h1>
           <p>Our Equilibrium collection promotes balance and calm.</p>
         </div>
         <div class="price">
-          <p><img src="images/icon-ethereum.svg" /> 0.041 ETH</p>
-          <p><img src="images/icon-clock.svg" />3 days left</p>
+          <img src="images/icon-ethereum.svg" /> <span>0.041 ETH</span>
+          <img src="images/icon-clock.svg" /> <span>3 days left</span>
         </div>
         <hr />
         <div class="creator">
           <img src="images/image-avatar.png" />
-          <p><span>Creation of</span> Jules Wyvern</p>
+          <p><span>Creation of</span><a href="#"> Jules Wyvern</a></p>
         </div>
       </div>
     </main>
@@ -160,7 +209,7 @@
         Challenge by
         <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
           >Frontend Mentor</a
-        >. Coded by <a href="#">Your Name Here</a>.
+        >. Coded by <a href="#">Apah Benson</a>.
       </div>
     </footer>
   </body>
