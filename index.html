@@ -43,7 +43,6 @@
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        border: 2px solid salmon;
       }
       main {
         background-color: var(--darkblue);
@@ -56,11 +55,17 @@
       .nftimage {
         width: 100%;
         border-radius: 10px;
+        cursor: pointer;
       }
 
       .nftprofile h1 {
         color: var(--White);
         font-size: 18px;
+        cursor: pointer;
+      }
+
+      .nftprofile h1:hover {
+        color: var(--Cyan);
       }
 
       .nftprofile p {
@@ -104,7 +109,11 @@
         margin-left: 10px;
         color: var(--White);
       }
-
+      .creator p:hover {
+        color: var(--Cyan);
+        cursor: pointer;
+        transition: 0.2s;
+      }
       hr {
         border: solid 0.1px var(--slightlyblue);
       }
